@@ -79,10 +79,10 @@ def has_balanced_parens(string):
 
 
 #Given a string with a month and a year (separated by a space), return the number of days in that month.
-
+# *CORRECT*
 def days_in_month(date):
 
-    date_list = date.split(" ")
+    date_list = date.split(" ")    #OR   month, year = date.split()
     month = int(date_list[0])
     year = int(date_list[1])
 
@@ -97,7 +97,6 @@ def days_in_month(date):
     if month in {4, 6, 9, 11}:
         return 30
     
-
 def is_leap_year(year):
 
     if year % 400 == 0:
@@ -106,3 +105,28 @@ def is_leap_year(year):
         return False
     if year % 4 == 0:
         return True
+
+#Given a list of numbers, return the smallest and the largest number.
+#For an empty list, it should return None as both smallest and largest:
+#Make sure it works with a list of one item, which is both smallest and largest:
+
+def find_range(nums):
+
+    if len(nums) == 0:
+        return(None, None)
+    
+    if len(nums) == 1:
+        return(nums[0], nums[0])
+    
+    smallest = nums[0]
+    largest = nums[0]
+
+    for num in nums:
+        if num < smallest:
+            smallest = num
+
+        elif num > largest:
+            largest = num
+
+    return(smallest, largest)
+
