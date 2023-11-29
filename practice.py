@@ -110,6 +110,7 @@ def is_leap_year(year):
 #For an empty list, it should return None as both smallest and largest:
 #Make sure it works with a list of one item, which is both smallest and largest:
 
+# *CORRECT*
 def find_range(nums):
 
     if len(nums) == 0:
@@ -129,4 +130,33 @@ def find_range(nums):
             largest = num
 
     return(smallest, largest)
+
+
+#You will be given a list of integers, some even and some odd:
+#Write a function that returns the indices (0-based, as usual in Python) of all the numbers which are even.
+
+def show_evens(nums):
+
+    if nums == []:
+        return None
+    
+    even_indices = []
+    
+    for idx, num in enumerate(nums):
+        if num % 2 == 0:
+            even_indices.append(idx)
+
+    return even_indices
+
+
+    #OR Not using enumerate
+
+    even_indices = []
+
+    for i in range(len(nums)):
+        if nums[i] % 2 == 0:
+            even_indices.append(i)
+
+    return even_indices
+
 
