@@ -134,7 +134,7 @@ def find_range(nums):
 
 #You will be given a list of integers, some even and some odd:
 #Write a function that returns the indices (0-based, as usual in Python) of all the numbers which are even.
-
+# *CORRECT*
 def show_evens(nums):
 
     if nums == []:
@@ -159,4 +159,13 @@ def show_evens(nums):
 
     return even_indices
 
+#Compute the sum of a list of numbers.
+# *CORRECT*
+def sum_list(nums):
 
+    total = 0
+
+    for num in nums:
+        total += num
+
+    return total
