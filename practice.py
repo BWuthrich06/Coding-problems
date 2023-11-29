@@ -169,3 +169,29 @@ def sum_list(nums):
         total += num
 
     return total
+
+
+
+#In this challenge, you should create a function that works like that built-in Python .split() method 1.
+# *CORRECT* but study further.
+def split_string(string, splitter):
+    
+    split_list = []
+    index = 0
+
+    while index <= len(string):
+
+        start_index = index
+        index = string.find(splitter, index)    #Find method finds the 'element' and optional index start and end if supplied.  Here supplied start.
+
+        if index != -1:
+            split_list.append(string[start_index:index])
+            index += len(splitter)
+
+        else:
+            split_list.append(string[start_index:])
+            break
+
+    return split_list
+    
+    
