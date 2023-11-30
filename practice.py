@@ -239,4 +239,19 @@ def print_digits_backwards(num):
         print(digit)
         num = (num - digit) // 10
 
-        
+
+
+
+
+#Sum a list of integers using recursion.
+#Base case of when empty or none, return 0
+#Take out first element
+#Return first elem + recursive call of nums[1:]
+def sum_list(nums):
+
+    if len(nums) == 0:
+        return 0
+
+    first_elem = nums[0]
+
+    return first_elem + sum_list(nums[1:])
