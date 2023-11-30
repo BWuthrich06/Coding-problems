@@ -195,3 +195,34 @@ def split_string(string, splitter):
     return split_list
     
     
+#Imagine a list of numbers from 1 to max_num, inclusive – except that one of these numbers will be missing from the list.
+#You should write a function that takes this list of numbers, as well as the max_num, and it should return the missing number.
+
+#turn list into set
+#loop through range of 1, max_num + 1
+#check if i in the set
+# return missing number, or 0 if none missing
+
+def find_missing_number(nums, max_num):
+# *CORRECT*
+    set_nums = set(nums)
+
+    for i in range(1, max_num + 1):
+        if i not in set_nums:
+            return i
+        
+    return 0
+
+#OR
+
+# def get_missing_number_sort(nums, max_num):
+
+#     nums.sort()
+#     index = 1
+
+#     for num in nums:
+#         if num != index:
+#             return index
+#         index += 1
+
+#     return 0
