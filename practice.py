@@ -226,3 +226,17 @@ def find_missing_number(nums, max_num):
 #         index += 1
 
 #     return 0
+
+
+#Given an integer, print each digit in reverse order, starting with the ones place.
+#For example, if you were given 1 you should simply print 1, if given 314 you should print 4, 1, 3,
+#  and if given 12 you should print 2, 1:
+
+def print_digits_backwards(num):
+
+    while num:
+        digit = num % 10
+        print(digit)
+        num = (num - digit) // 10
+
+        
