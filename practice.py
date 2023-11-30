@@ -255,3 +255,30 @@ def sum_list(nums):
     first_elem = nums[0]
 
     return first_elem + sum_list(nums[1:])
+
+
+#Given a word in English, return True if that word contains more vowels than non-vowels;
+#  otherwise, return False. The word will always be a single word, without any punctuation or spaces. 
+# It will contain only uppercase and lowercase letters.
+#If the phrase is over half vowels, it should return True:
+
+#counter vowels
+#counter nonvowels
+#check if each char in 'AEIOUaeiou'
+#check if vowels > nonvowels, return true or false
+
+def has_more_vowels(word):
+
+    vowels = 0
+    non_vowels = 0
+
+    
+    for char in word:
+        if char in 'AEIOUaeiou':
+            vowels += 1
+
+        else:
+            non_vowels += 1
+
+    return vowels > non_vowels
+
