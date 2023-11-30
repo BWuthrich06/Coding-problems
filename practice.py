@@ -282,3 +282,18 @@ def has_more_vowels(word):
 
     return vowels > non_vowels
 
+
+
+#Reverse linked list in place
+def reverse_linked_list_in_place(lst):
+
+    current = lst.head
+    previous = None
+
+    while current:
+        next = current.next
+        current.next = previous
+        previous = current
+        current = next
+
+    return previous
