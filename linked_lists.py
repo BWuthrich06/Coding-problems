@@ -33,8 +33,10 @@ def reverse_linked_list_inplace(llist):
     
     return previous   #return new head of reversed list
 
+
 # 2 pointers, one double fast, one single fast.  Return middle of linked list node. Moves twice as fast so when end reached slow will be in middle.
 def find_middle(linked_list):
+
     fast_pointer = linked_list.head
     slow_pointer = linked_list.head
 
